@@ -33,74 +33,11 @@
     <link href="fonts/montsterat.css" rel="stylesheet" type="text/css">
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/smoothscroll.js"></script>
     <style type="text/css">
 ${demo.css}
     </style>
-    <script type="text/javascript">
-        $(function () {
-
-    // Prepare demo data
-    var data = [
-  {
-    "name":"Aceh",
-    "value": 309
-  },
-  {
-    "name":"Sumatera Utara",
-    "value": 500
-  },
-  //BARU CONTOH
-  {
-    "name":"Irian Jaya Barat",
-    "value": 105
-  },
-  {
-    "name":"Papua",
-    "value": 266
-  }
-];
-
-    // Initiate the chart
-    $('#container').highcharts('Map', {
-
-        title : {
-            text : 'Highmaps basic demo'
-        },
-
-        subtitle : {
-            text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/id/id-all.js">Indonesia</a>'
-        },
-
-        mapNavigation: {
-            enabled: true,
-            buttonOptions: {
-                verticalAlign: 'bottom'
-            }
-        },
-
-        colorAxis: {
-            min: 0
-        },
-
-        series : [{
-            data : data,
-            mapData: Highcharts.maps['countries/id/id-all'],
-            joinBy: 'name',
-            name: 'Random data',
-            states: {
-                hover: {
-                    color: '#BADA55'
-                }
-            },
-            dataLabels: {
-                enabled: true,
-                format: '{point.name}'
-            }
-        }]
-    });
-});
-
-    </script>
+    <script type="text/javascript" src="js/data-sarana.js"></script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -143,9 +80,11 @@ ${demo.css}
                 <div class="col-md-8 col-md-offset-2">
                     <h1 class="brand-heading">Visualisasi data</h1>
                     <p class="intro-text">Memvisualisasikan Data Sarana dan Tenaga Kesehatan yang ada di Indonesia</p>
-                    <a href="#Data Visualization" class="btn btn-circle page-scroll">
+                    <div class ="btn btn-circle page-scroll">
+                    <a href="#Data Visualization" class="smoothScroll">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
+                </div>
                 </div>
             </div>
         </div>
@@ -161,7 +100,7 @@ ${demo.css}
             <script src="http://code.highcharts.com/maps/highmaps.js"></script>
             <script src="http://code.highcharts.com/maps/modules/exporting.js"></script>
             <script src="http://code.highcharts.com/mapdata/countries/id/id-all.js"></script>
-            <div id="container" style="height: 500px; min-width: 310px; max-width: 600px; margin: 0 auto"></div>
+            <div id="container" style="height: 500px; min-width: 400px; max-width: 600px; margin: 0 auto; background-color:transparent;"></div>
         </div>
     </div>
 </section>
