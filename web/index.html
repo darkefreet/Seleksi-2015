@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <meta charset="utf-8">
@@ -21,9 +21,84 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
-    <style type="text/css">
-    </style>
     <script type="text/javascript" src="js/data-sarana.js"></script>
+    <script src="js/highmaps.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/indonesia.js"></script>
+
+    <style type="text/css">
+        /*----- Tabs -----*/
+        .tabs {
+            align-content: center;
+            width:100%;
+            display:inline-block;
+        }
+
+        /*----- Tab Links -----*/
+        /* Clearfix */
+        .tab-links:after {
+            display:block;
+            clear:both;
+            content:'';
+        }
+
+        .tab-links li {
+            margin:0px 5px;
+            float:left;
+            list-style:none;
+        }
+
+        .tab-links a {
+            padding:9px 15px;
+            display:inline-block;
+            border-radius:3px 3px 0px 0px;
+            background:#7FB5DA;
+            font-size:16px;
+            font-weight:600;
+            color:#4c4c4c;
+            transition:all linear 0.15s;
+        }
+
+        .tab-links a:hover {
+            background:#a7cce5;
+            text-decoration:none;
+        }
+
+        li.active a, li.active a:hover {
+            background:#fff;
+            color:#4c4c4c;
+        }
+
+        /*----- Content of Tabs -----*/
+        .tab-content {
+            padding:15px;
+            border-radius:3px;
+            /*box-shadow:-1px 1px 1px rgba(0,0,0,0.15);*/
+            /*background:#fff;*/
+        }
+
+        .tab {
+            display:none;
+        }
+
+        .tab.active {
+            display:block;
+        }
+    </style>
+    <script type= "text/javascript">
+        jQuery(document).ready(function() {
+            jQuery('.tabs .tab-links a').on('click', function(e)  {
+                var currentAttrValue = jQuery(this).attr('href');
+
+                // Show/Hide Tabs
+                jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
+
+                // Change/remove current tab to active
+                jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+                e.preventDefault();
+            });
+        });
+    </script>
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
@@ -83,12 +158,27 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Data Visualization</h2>
             <p>Berikut adalah gambaran mengenai persebaran sarana dan tenaga kesehatan Indonesia </p>
-            <div class = "map">
-                <script src="js/highmaps.js"></script>
-                <script src="js/exporting.js"></script>
-                <script src="js/indonesia.js"></script>
+            <div class="tabs">
+                <ul class="tab-links">
+                    <li class="active"><a href="#tab1">Sarana Kesehatan</a></li>
+                    <li><a href="#tab2">Tenaga Kesehatan</a></li>
+                    <li><a href="#tab3">Pemenuhan Standard</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="tab1" class="tab active">
+                        <div id="container" style="height: 600px; min-width: 600px; max-width: 2000px; margin: 0 auto; margin-left: -300px; margin-right : -300px; background-color:transparent;"></div>
+                    </div>
+
+                    <div id="tab2" class="tab">
+
+                    </div>
+
+                    <div id="tab3" class="tab">
+
+                    </div>
+                </div>
             </div>
-            <div id="container" style="height: 600px; min-width: 600px; max-width: 2000px; margin: 0 auto; margin-left: -300px; margin-right : -300px; background-color:transparent;"></div>
         </div>
     </div>
 </section>

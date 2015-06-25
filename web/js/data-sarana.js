@@ -157,9 +157,17 @@ $(function () {
             min: 0
         },
 
+        tooltip: {
+            footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
+        },
+
         series : [{
             data : data,
             mapData: Highcharts.maps['countries/id/id-all'],
+            //tambahan
+            allowPointSelect: true,
+            cursor: 'pointer',
+            //end of tambahan
             joinBy: 'name',
             name: 'Sarana Kesehatan',
             states: {
