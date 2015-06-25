@@ -3,147 +3,146 @@ $(function () {
     var data = [
                 {
                   "name":"Aceh",
-                  "value":309
+                  "value":2.062562161
                 },
                 {
                   "name":"Sumatera Utara",
-                  "value":500
+                  "value":1.155427846
                 },
                 {
                   "name":"Sumatera Barat",
-                  "value":242
+                  "value":1.497861833
                 },
                 {
                   "name":"Riau",
-                  "value":176
+                  "value":0.953349606
                 },
                 {
                   "name":"Jambi",
-                  "value":163
+                  "value":1.581365116
                 },
                 {
                   "name":"Sumatera Selatan",
-                  "value":284
+                  "value":1.143563683
                 },
                 {
                   "name":"Bengkulu",
-                  "value":167
+                  "value":2.920400719
                 },
                 {
                   "name":"Lampung",
-                  "value":264
+                  "value":1.04095405
                 },
                 {
                   "name":"Bangka-Belitung",
-                  "value":55
+                  "value":1.348815005
                 },
                 {
                   "name":"Kepulauan Riau",
-                  "value":61
+                  "value":1.089828683
                 },
                 {
-                  "name":"Jakarta Raya",
-                  "value":339
+                  "name":"DKI Jakarta",
+                  "value":1.058516389
                 },
                 {
                   "name":"Jawa Barat",
-                  "value":1008
+                  "value":0.702378135
                 },
                 {
                   "name":"Jawa Tengah",
-                  "value":849
+                  "value":0.786532124
                 },
                 {
                   "name":"Yogyakarta",
-                  "value":119
+                  "value":1.032540649
                 },
                 {
                   "name":"Jawa Timur",
-                  "value":944
+                  "value":0.755668373
                 },
                 {
                   "name":"Banten",
-                  "value":196
+                  "value":0.553038769
                 },
                 {
                   "name":"Bali",
-                  "value":114
+                  "value":0.879006322
                 },
                 {
                   "name":"Nusa Tenggara Barat",
-                  "value":145
+                  "value":0.966621128
                 },
                 {
                   "name":"Nusa Tenggara Timur",
-                  "value":288
+                  "value":1.844645415
                 },
                 {
                   "name":"Kalimantan Barat",
-                  "value":229
+                  "value":1.562790393
                 },
                 {
                   "name":"Kalimantan Tengah",
-                  "value":169
+                  "value":2.291951183
                 },
                 {
                   "name":"Kalimantan Selatan",
-                  "value":213
+                  "value":1.761973145
                 },
                 {
                   "name":"Kalimantan Timur",
-                  "value":207
+                  "value":1.747748402
                 },
                 {
                   "name":"Sulawesi Utara",
-                  "value":159
+                  "value":2.100770018
                 },
                 {
                   "name":"Sulawesi Tengah",
-                  "value":165
+                  "value":1.878551458
                 },
                 {
                   "name":"Sulawesi Selatan",
-                  "value":395
+                  "value":1.474838875
                 },
                 {
                   "name":"Sulawesi Tenggara",
-                  "value":223
+                  "value":2.996525106
                 },
                 {
                   "name":"Gorontalo",
-                  "value":75
+                  "value":2.163120431
                 },
                 {
                   "name":"Sulawesi Barat",
-                  "value":77
+                  "value":1.993697843
                 },
                 {
                   "name":"Maluku",
-                  "value":135
+                  "value":2.641006947
                 },
                 {
                   "name":"Maluku Utara",
-                  "value":96
+                  "value":2.774333943
                 },
                 {
                   "name":"Irian Jaya Barat",
-                  "value":105
+                  "value":4.1424367
                 },
                 {
                   "name":"Papua",
-                  "value":266
+                  "value":2.816423206
                 }
-            ];
+              ];
 
     // Initiate the chart
     $('#sarana').highcharts('Map', {
-
         title : {
-            text : 'Jumlah Sarana Kesehatan Per Provinsi'
+            text : 'Rasio Jumlah Puskesmas per 30.000 Penduduk'
         },
 
         subtitle : {
-            text : 'Tahun sekian'
+            text : 'Tahun 2012'
         },
 
         mapNavigation: {
@@ -152,13 +151,13 @@ $(function () {
                 verticalAlign: 'bottom'
             }
         },
-
+        
         colorAxis: {
-            min: 0
-        },
-
-        tooltip: {
-            footerFormat: '<span style="font-size: 10px">(Click for details)</span>'
+          dataClasses: [{
+              to: 1
+          }, {
+              from: 1
+          }]
         },
 
         series : [{
