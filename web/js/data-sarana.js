@@ -136,14 +136,14 @@ $(function () {
             ];
 
     // Initiate the chart
-    $('#container').highcharts('Map', {
+    $('#sarana').highcharts('Map', {
 
         title : {
             text : 'Jumlah Sarana Kesehatan Per Provinsi'
         },
 
         subtitle : {
-            text : 'Source map: <a href="http://code.highcharts.com/mapdata/countries/id/id-all.js">Indonesia</a>'
+            text : 'Tahun sekian'
         },
 
         mapNavigation: {
