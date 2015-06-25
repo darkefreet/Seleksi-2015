@@ -1,5 +1,4 @@
 $(function () {
-
     // Prepare demo data
     var data = [
                 {
