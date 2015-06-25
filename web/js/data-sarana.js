@@ -34,7 +34,7 @@ $(function () {
                   "value":264
                 },
                 {
-                  "name":"Kepulauan Bangka Belitung",
+                  "name":"Bangka-Belitung",
                   "value":55
                 },
                 {
