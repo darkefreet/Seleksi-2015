@@ -47,102 +47,112 @@ $(function () {
             ],
             crosshair: true
         },
-        yAxis: {
-            min: 0,
+            yAxis:[{ // Primary yAxis
+            labels: {
+                format: '{value} Buah',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
             title: {
-                text: 'Rasio'
+                text: 'Puskesmas',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
+            opposite: true
+
+        }, { // Secondary yAxis
+            gridLineWidth: 0,
+            title: {
+                text: 'Angka Ideal Puskesmas',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
+            },
+            labels: {
+                format: '{value} Buah',
+                style: {
+                    color: Highcharts.getOptions().colors[2]
+                }
             }
-        },
+
+        }, { // Tertiary yAxis
+            gridLineWidth: 0,
+            title: {
+                text: 'Tenaga Medis',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            labels: {
+                format: '{value} Orang',
+                style: {
+                    color: Highcharts.getOptions().colors[1]
+                }
+            },
+            opposite: true
+        },{  //Quaternary yAxis
+                gridLineWidth: 0,
+                title: {
+                    text: 'Tenaga Medis Ideal',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                labels: {
+                    format: '{value} Orang',
+                    style: {
+                        color: Highcharts.getOptions().colors[1]
+                    }
+                },
+                opposite: true
+            }
+            ],
         tooltip: {
-            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
-            footerFormat: '</table>',
-            shared: true,
-            useHTML: true
+            shared: true
         },
-        plotOptions: {
-            column: {
-                pointPadding: 0.2,
-                borderWidth: 0
-            }
+        legend: {
+            layout: 'vertical',
+            align: 'left',
+            x: 80,
+            verticalAlign: 'top',
+            y: 55,
+            floating: true,
+            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
         },
         series: [{
-            name: 'Rasio Jumlah Puskesmas per 30.000 Penduduk',
-            data: [
-                2.062562161,
-                1.155427846,
-                1.497861833,
-                0.953349606,
-                1.581365116,
-                1.143563683,
-                2.920400719,
-                1.04095405,
-                1.348815005,
-                1.089828683,
-                1.058516389,
-                0.702378135,
-                0.786532124,
-                1.032540649,
-                0.755668373,
-                0.553038769,
-                0.879006322,
-                0.966621128,
-                1.844645415,
-                1.562790393,
-                2.291951183,
-                1.761973145,
-                1.747748402,
-                2.100770018,
-                1.878551458,
-                1.474838875,
-                2.996525106,
-                2.163120431,
-                1.993697843,
-                2.641006947,
-                2.774333943,
-                4.1424367,
-                2.816423206
-            ]
+            name: 'Puskesmas',
+            type: 'column',
+            data: [309, 500, 242, 176, 163, 284, 167, 264, 55, 61, 339, 1008, 849, 119, 944, 196, 114, 145, 288, 229, 169, 213, 207, 159, 165, 394, 223, 75, 76, 135, 96, 105, 266],
+            tooltip: {
+                valueSuffix: ' Buah'
+            }
 
         }, {
-            name: 'Rasio Jumlah Tenaga Medis per 5000 penduduk',
-            data: [
-                1.843401025,
-                1.696168077,
-                1.794958395,
-                1.445371894,
-                1.256360629,
-                0.24763791,
-                1.463114931,
-                0.805030752,
-                1.226195459,
-                2.283875955,
-                1.878164035,
-                0.596231704,
-                0.957302546,
-                3.456263516,
-                1.092143592,
-                0.396438506,
-                2.552202566,
-                0.794407019,
-                0.761129734,
-                1.030486242,
-                1.347142904,
-                1.137423979,
-                1.965865151,
-                1.627326041,
-                0.941173256,
-                0.961445596,
-                0.716657723,
-                1.129629558,
-                1.173778817,
-                1.571562159,
-                1.363084212,
-                1.8016312,
-                0.529402858
-            ]
-
+            name: 'Puskesmas Ideal',
+            type: 'spline',
+            data: [150,433,162,185, 103, 249, 57, 254, 41, 56, 320, 1435, 1079, 115, 1250, 354, 129, 150, 156, 147, 74, 121, 118, 76, 88, 268, 74, 35, 39, 51, 35, 25,95],
+            marker: {
+                enabled: false
+            },
+            tooltip: {
+                valueSuffix: ' Buah'
+            }
+        }, {
+            name: 'Tenaga Medis',
+            type: 'column',
+            data: [1657, 4404, 1740, 1601, 777, 369, 502, 1225, 300, 767, 3609, 5133, 6199, 2390, 8186, 843, 1986, 715, 712, 906, 595, 825, 1397, 738, 496, 1545, 319, 234, 272, 482, 283, 274, 300],
+            tooltip: {
+                valueSuffix: ' Orang'
+            }
+        }, {
+            name: 'Tenaga Medis Ideal',
+            type: 'spline',
+            data: [899, 2596, 969, 1107, 618, 1490, 343, 1522, 245, 336, 1922, 8611, 6477, 691, 7495, 2126, 778, 900, 937, 880, 442, 725, 710, 454, 527, 1607, 446, 208, 231, 306, 207, 152, 567],
+            tooltip: {
+                valueSuffix: ' Orang'
+            }
         }]
     });
 });
