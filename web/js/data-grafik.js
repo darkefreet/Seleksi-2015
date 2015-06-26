@@ -1,106 +1,148 @@
 $(function () {
     $('#grafik').highcharts({
         chart: {
-            zoomType: 'xy'
+            type: 'column'
         },
         title: {
-            text: 'Average Monthly Weather Data for Tokyo'
+            text: 'Grafik Kelayakan Sarana Puskesmas dan Tenaga Medis'
         },
         subtitle: {
-            text: 'Source: WorldClimate.com'
+            text: 'Tahun 2012'
         },
-        xAxis: [{
-            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        xAxis: {
+            categories: [
+                "Aceh",
+                "Sumatera Utara",
+                "Sumatera Barat",
+                "Riau",
+                "Jambi",
+                "Sumatera Selatan",
+                "Bengkulu",
+                "Lampung",
+                "Bangka-Belitung",
+                "Kepulauan Riau",
+                "DKI Jakarta",
+                "Jawa Barat",
+                "Jawa Tengah",
+                "Yogyakarta",
+                "Jawa Timur",
+                "Banten",
+                "Bali",
+                "Nusa Tenggara Barat",
+                "Nusa Tenggara Timur",
+                "Kalimantan Barat",
+                "Kalimantan Tengah",
+                "Kalimantan Selatan",
+                "Kalimantan Timur",
+                "Sulawesi Utara",
+                "Sulawesi Tengah",
+                "Sulawesi Selatan",
+                "Sulawesi Tenggara",
+                "Gorontalo",
+                "Sulawesi Barat",
+                "Maluku",
+                "Maluku Utara",
+                "Irian Jaya Barat",
+                "Papua"
+            ],
             crosshair: true
-        }],
-        yAxis: [{ // Primary yAxis
-            labels: {
-                format: '{value}°C',
-                style: {
-                    color: Highcharts.getOptions().colors[2]
-                }
-            },
-            title: {
-                text: 'Temperature',
-                style: {
-                    color: Highcharts.getOptions().colors[2]
-                }
-            },
-            opposite: true
-
-        }, { // Secondary yAxis
-            gridLineWidth: 0,
-            title: {
-                text: 'Rainfall',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
-            },
-            labels: {
-                format: '{value} mm',
-                style: {
-                    color: Highcharts.getOptions().colors[0]
-                }
-            }
-
-        }, { // Tertiary yAxis
-            gridLineWidth: 0,
-            title: {
-                text: 'Sea-Level Pressure',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
-            },
-            labels: {
-                format: '{value} mb',
-                style: {
-                    color: Highcharts.getOptions().colors[1]
-                }
-            },
-            opposite: true
-        }],
-        tooltip: {
-            shared: true
         },
-        legend: {
-            layout: 'vertical',
-            align: 'left',
-            x: 80,
-            verticalAlign: 'top',
-            y: 55,
-            floating: true,
-            backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+        yAxis: {
+            min: 0,
+            title: {
+                text: 'Rasio'
+            }
+        },
+        tooltip: {
+            headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+            pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+                '<td style="padding:0"><b>{point.y:.1f} </b></td></tr>',
+            footerFormat: '</table>',
+            shared: true,
+            useHTML: true
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
         },
         series: [{
-            name: 'Rainfall',
-            type: 'column',
-            yAxis: 1,
-            data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4],
-            tooltip: {
-                valueSuffix: ' mm'
-            }
+            name: 'Rasio Jumlah Puskesmas per 30.000 Penduduk',
+            data: [
+                2.062562161,
+                1.155427846,
+                1.497861833,
+                0.953349606,
+                1.581365116,
+                1.143563683,
+                2.920400719,
+                1.04095405,
+                1.348815005,
+                1.089828683,
+                1.058516389,
+                0.702378135,
+                0.786532124,
+                1.032540649,
+                0.755668373,
+                0.553038769,
+                0.879006322,
+                0.966621128,
+                1.844645415,
+                1.562790393,
+                2.291951183,
+                1.761973145,
+                1.747748402,
+                2.100770018,
+                1.878551458,
+                1.474838875,
+                2.996525106,
+                2.163120431,
+                1.993697843,
+                2.641006947,
+                2.774333943,
+                4.1424367,
+                2.816423206
+            ]
 
         }, {
-            name: 'Sea-Level Pressure',
-            type: 'spline',
-            yAxis: 2,
-            data: [1016, 1016, 1015.9, 1015.5, 1012.3, 1009.5, 1009.6, 1010.2, 1013.1, 1016.9, 1018.2, 1016.7],
-            marker: {
-                enabled: false
-            },
-            dashStyle: 'shortdot',
-            tooltip: {
-                valueSuffix: ' mb'
-            }
+            name: 'Rasio Jumlah Tenaga Medis per 5000 penduduk',
+            data: [
+                1.843401025,
+                1.696168077,
+                1.794958395,
+                1.445371894,
+                1.256360629,
+                0.24763791,
+                1.463114931,
+                0.805030752,
+                1.226195459,
+                2.283875955,
+                1.878164035,
+                0.596231704,
+                0.957302546,
+                3.456263516,
+                1.092143592,
+                0.396438506,
+                2.552202566,
+                0.794407019,
+                0.761129734,
+                1.030486242,
+                1.347142904,
+                1.137423979,
+                1.965865151,
+                1.627326041,
+                0.941173256,
+                0.961445596,
+                0.716657723,
+                1.129629558,
+                1.173778817,
+                1.571562159,
+                1.363084212,
+                1.8016312,
+                0.529402858
+            ]
 
-        }, {
-            name: 'Temperature',
-            type: 'spline',
-            data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6],
-            tooltip: {
-                valueSuffix: ' °C'
-            }
         }]
     });
 });

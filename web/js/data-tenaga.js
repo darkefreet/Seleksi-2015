@@ -3,135 +3,135 @@ $(function () {
     var data = [
       {
         "name":"Aceh",
-        "value":2.062562161
+        "value":1.843401025
       },
       {
         "name":"Sumatera Utara",
-        "value":1.155427846
+        "value":1.696168077
       },
       {
         "name":"Sumatera Barat",
-        "value":1.497861833
+        "value":1.794958395
       },
       {
         "name":"Riau",
-        "value":0.953349606
+        "value":1.445371894
       },
       {
         "name":"Jambi",
-        "value":1.581365116
+        "value":1.256360629
       },
       {
         "name":"Sumatera Selatan",
-        "value":1.143563683
+        "value":0.24763791
       },
       {
         "name":"Bengkulu",
-        "value":2.920400719
+        "value":1.463114931
       },
       {
         "name":"Lampung",
-        "value":1.04095405
+        "value":0.805030752
       },
       {
         "name":"Bangka-Belitung",
-        "value":1.348815005
+        "value":1.226195459
       },
       {
         "name":"Kepulauan Riau",
-        "value":1.089828683
+        "value":2.283875955
       },
       {
-        "name":"DKI Jakarta",
-        "value":1.058516389
+        "name":"Jakarta Raya",
+        "value":1.878164035
       },
       {
         "name":"Jawa Barat",
-        "value":0.702378135
+        "value":0.596231704
       },
       {
         "name":"Jawa Tengah",
-        "value":0.786532124
+        "value":0.957302546
       },
       {
         "name":"Yogyakarta",
-        "value":1.032540649
+        "value":3.456263516
       },
       {
         "name":"Jawa Timur",
-        "value":0.755668373
+        "value":1.092143592
       },
       {
         "name":"Banten",
-        "value":0.553038769
+        "value":0.396438506
       },
       {
         "name":"Bali",
-        "value":0.879006322
+        "value":2.552202566
       },
       {
         "name":"Nusa Tenggara Barat",
-        "value":0.966621128
+        "value":0.794407019
       },
       {
         "name":"Nusa Tenggara Timur",
-        "value":1.844645415
+        "value":0.761129734
       },
       {
         "name":"Kalimantan Barat",
-        "value":1.562790393
+        "value":1.030486242
       },
       {
         "name":"Kalimantan Tengah",
-        "value":2.291951183
+        "value":1.347142904
       },
       {
         "name":"Kalimantan Selatan",
-        "value":1.761973145
+        "value":1.137423979
       },
       {
         "name":"Kalimantan Timur",
-        "value":1.747748402
+        "value":1.965865151
       },
       {
         "name":"Sulawesi Utara",
-        "value":2.100770018
+        "value":1.627326041
       },
       {
         "name":"Sulawesi Tengah",
-        "value":1.878551458
+        "value":0.941173256
       },
       {
         "name":"Sulawesi Selatan",
-        "value":1.474838875
+        "value":0.961445596
       },
       {
         "name":"Sulawesi Tenggara",
-        "value":2.996525106
+        "value":0.716657723
       },
       {
         "name":"Gorontalo",
-        "value":2.163120431
+        "value":1.129629558
       },
       {
         "name":"Sulawesi Barat",
-        "value":1.993697843
+        "value":1.173778817
       },
       {
         "name":"Maluku",
-        "value":2.641006947
+        "value":1.571562159
       },
       {
         "name":"Maluku Utara",
-        "value":2.774333943
+        "value":1.363084212
       },
       {
         "name":"Irian Jaya Barat",
-        "value":4.1424367
+        "value":1.8016312
       },
       {
         "name":"Papua",
-        "value":2.816423206
+        "value":0.529402858
       }
     ];
 
