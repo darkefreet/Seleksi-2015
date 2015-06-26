@@ -22,7 +22,6 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/smoothscroll.js"></script>
     <script type="text/javascript" src="js/data-sarana.js"></script>
-    <script type="text/javascript" src="js/data-tenaga.js"></script>
     <script src="js/highmaps.js"></script>
     <script src="js/exporting.js"></script>
     <script src="js/indonesia.js"></script>
@@ -37,7 +36,6 @@
             display: inline;
             height: 30px;
             line-height: 30px;
-            float: left;
             margin-right: 100px;
             background-color: #ccc;
             border-top: 1px solid #d4d4d1;
@@ -51,6 +49,11 @@
             color: #fff;
             text-decoration: none;
         }
+
+        .tabs-menu li.active{
+            background-color: #337ab7;
+        }
+
 
 </style>
 </head>
@@ -112,18 +115,25 @@
 <!-- Data Visualization Section -->
 <div id="data">
     <div class="row">
+        <center>
         <div class="col-lg-8 col-lg-offset-2">
             <br><br><br><br><br>
-            <h2><center>Data Visualization</center></h2>
+            <h2>Data Visualization</h2>
             <p>Berikut adalah gambaran mengenai persebaran sarana dan tenaga kesehatan Indonesia </p>
             <div id="tabs-container">
                 <ul class="tabs-menu">
-                    <li><a href="map-sarana.html">Sarana Kesehatan</a></li>
-                    <li><a href="map-tenaga.html">Tenaga Kesehatan</a></li>
-                    <li><a href="grafik.html">Grafik Kelayakan</a></li>
+                    <li class = "active"><a href="index.html#data">Sarana Kesehatan</a></li>
+                    <li><a href="map-tenaga.html#data">Tenaga Kesehatan</a></li>
+                    <li><a href="grafik.html#data">Grafik Kelayakan</a></li>
                 </ul>
             </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <div id="sarana" style="height: 600px; min-width: 900px; max-width: 1200px; margin: 0 auto; background-color:transparent;"></div>
+                </div>
+            </div>
         </div>
+        </center>
     </div>
 </div>
 <!-- About Us Section -->

@@ -19,6 +19,32 @@
     .geo_map{
         border:2px black dashed;
     }
+    .tabs-menu ul {
+        padding: 0;
+        list-style-type: none;
+        text-align: center;
+    }
+    .tabs-menu li {
+        display: inline;
+        height: 30px;
+        line-height: 30px;
+        margin-right: 100px;
+        background-color: #ccc;
+        border-top: 1px solid #d4d4d1;
+        border-right: 1px solid #d4d4d1;
+        border-left: 1px solid #d4d4d1;
+    }
+
+    .tabs-menu li a {
+        padding: 10px;
+        text-transform: uppercase;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .tabs-menu li.active{
+        background-color: #337ab7;
+    }
     </style>
 
     <!-- Bootstrap Core CSS -->
@@ -48,23 +74,109 @@ ${demo.css}
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="index.html#data">
+            <a class="navbar-brand page-scroll" href="#page-top">
                 <i class="fa fa-play-circle"></i>  <span class="light">Home</span> Kelompok 5
             </a>
         </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav">
+                <!-- Hidden li included to remove active class from Data Visualization link when scrolled up past Data Visualization section -->
+                <!--
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#data">Data Visualization</a>
+                </li>
+                <li>
+                    <a class="page-scroll" href="#About Us">About Us</a>
+                </li>
+                -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
 </nav>
-<br><br><br>
+<!-- Intro Header -->
+<header class="intro">
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <br><br><br><br><br>
+                    <h1 class="brand-heading">Visualisasi data</h1>
+                    <p class="intro-text">Memvisualisasikan Data Sarana dan Tenaga Kesehatan yang ada di Indonesia</p>
+                    <div class ="btn btn-circle page-scroll">
+                        <a href="#data" class="smoothScroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
 <!-- Data Visualization Section -->
-<section id="Data Visualization">
+<div id="data">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <div id="grafik" style="height: 500px; min-width: 600px; max-width: 800px; margin: 0 auto; background-color:transparent;"></div>
+        <center>
+            <div class="col-lg-8 col-lg-offset-2">
+                <br><br><br><br><br>
+                <h2>Data Visualization</h2>
+                <p>Berikut adalah gambaran mengenai persebaran sarana dan tenaga kesehatan Indonesia </p>
+                <div id="tabs-container">
+                    <ul class="tabs-menu">
+                        <li><a href="index.html#data">Sarana Kesehatan</a></li>
+                        <li class = "active"><a href="map-tenaga.html#data">Tenaga Kesehatan</a></li>
+                        <li><a href="grafik.html#data">Grafik Kelayakan</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div id="grafik" style="height: 600px; min-width: 900px; max-width: 1200px; margin: 0 auto; background-color:transparent;"></div>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </div>
+</div>
+<!-- About Us Section -->
+<section id="About Us" class="content-section text-center">
+    <div class="About Us-section">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2"  style="margin-top:160px;">
+                <h2>About Us</h2>
+                <p>Tim Kami berisikan tiga orang yaitu</p>
+            </div>
+            <div class="row">
+                <div class="col-sm-offset-1 col-md-3" style="left:60px;">
+                    <img class="img-circle center-block" src="img/asta.jpg" style="width:80%;" align="center">
+                    <p style="text-align: center; line-height: 1.5"><span style="color:#fcdc24">18212082</span><br>Astarina Natyasari</p>
+                </div>
+                <div class="col-md-3" style="left:60px;">
+                    <img class="img-circle center-block" src="img/vany.jpg" style="width:80%;" align="center">
+                    <p style="text-align: center; line-height: 1.5"><span style="color:#fcdc24">13513035</span><br>Vanya Deasy Safrina</p>
+                </div>
+                <div class="col-md-3" style="left:60px;">
+                    <img class="img-circle center-block" src="img/wilhelm.jpg" style="width:80%;" align="center">
+                    <p style="text-align: center; line-height: 1.5"><span style="color:#fcdc24">13513071</span><br>Wilhelmus Andrian</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<!-- Footer -->
+<footer>
+    <div class="container text-center" style="top:70px;">
+        <p>Copyright &copy; Kelompok 5 Visualisasi Data</p>
+    </div>
+</footer>
+
+<!-- Bootstrap Core JavaScript
+<script src="js/bootstrap.min.js"></script>-->
 </body>
 </html>
